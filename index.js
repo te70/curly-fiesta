@@ -7,7 +7,7 @@ require('dotenv').config()
 const app = express();
 
 app.use(cors());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // var hngbio = mongoose.model('HngBio', hngbioSchema);
@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 // });
 
 app.get('/', (req, res) => {
-  return res.json({ String : "te70", Boolean :"backend", Number: "age", String : "Hi there"})
+  return res.json({ "slackUsername": "te70", "backend": true, "age": 22, "bio": "A backend developer" })
 });
 
 app.listen(3001, () => {
